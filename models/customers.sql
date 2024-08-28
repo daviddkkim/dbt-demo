@@ -34,10 +34,10 @@ customer_orders as (
 final as (
 
     select
-        customers.customer_id,
-        customers.first_name,
-        customers.last_name,
-        customer_orders.first_order_date,
+        customers.customer_id as 1,
+        customers.first_name as 2,
+        customers.last_name as 3,
+        customer_orders.first_order_date as 4,
         customer_orders.most_recent_order_date,
         coalesce(customer_orders.number_of_orders, 0) as number_of_orders
 
